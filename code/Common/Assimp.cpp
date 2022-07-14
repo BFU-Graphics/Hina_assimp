@@ -75,7 +75,11 @@ typedef BatchLoader::PropertyMap PropertyMap;
 /** Stores the LogStream objects for all active C log streams */
 struct mpred {
     bool operator()(const aiLogStream &s0, const aiLogStream &s1) const {
+#if __APPLE__
         return reinterpret_cast<long>(s0.callback) < reinterpret_cast<long>(s1.callback) && s0.user < s1.user;
+#else
+        return s0.callback < s1.callback && s0.user < s1.user;
+#endif
     }
 };
 typedef std::map<aiLogStream, Assimp::LogStream *, mpred> LogStreamMap;
