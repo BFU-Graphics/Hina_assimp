@@ -89,7 +89,7 @@ void UniqueNameGenerator::make_unique(std::vector<std::string> &names) {
     const std::string template_name_with_separator(template_name_ + separator_);
 
     auto format_name = [&](const std::string &base_name, size_t id) -> std::string {
-        return base_name + separator_ + std::to_string(id);
+        return base_name + separator_;
     };
 
     auto generate_unique_name = [&](const std::string &base_name) -> std::string {
