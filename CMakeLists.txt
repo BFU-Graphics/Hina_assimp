@@ -106,7 +106,7 @@ OPTION( ASSIMP_INSTALL
 )
 OPTION ( ASSIMP_ERROR_MAX
   "Enable all warnings."
-  ON
+  OFF
 )
 OPTION ( ASSIMP_ASAN
   "Enable AddressSanitizer."
