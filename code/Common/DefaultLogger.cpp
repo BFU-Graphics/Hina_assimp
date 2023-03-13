@@ -164,25 +164,25 @@ Logger *DefaultLogger::create(const char* name /*= "AssimpLog.txt"*/,
 
     return m_pLogger;
 }
-#include <iostream>
+
 // ----------------------------------------------------------------------------------
 void Logger::debug(const char* message) {
-	std::cerr << message << std::endl;
+	(void)(message);
 }
 
 // ----------------------------------------------------------------------------------
 void Logger::info(const char* message)  {
-	std::cerr << message << std::endl;
+	(void)(message);
 }
 
 // ----------------------------------------------------------------------------------
 void Logger::warn(const char* message)  {
-	std::cerr << message << std::endl;
+	(void)(message);
 }
 
 // ----------------------------------------------------------------------------------
 void Logger::error(const char* message) {
-	std::cerr << message << std::endl;
+	(void)(message);
 }
 
 // ----------------------------------------------------------------------------------
